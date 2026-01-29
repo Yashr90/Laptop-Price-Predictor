@@ -1,0 +1,14 @@
+
+[build]
+  base = "frontend"
+  publish = "dist"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  
+# Note: This only deploys the frontend. 
+# The backend must be deployed separately (e.g., Render, Railway) 
+# because Netlify Functions have a size limit that Pandas/Sklearn exceed.
